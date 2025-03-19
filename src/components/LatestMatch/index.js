@@ -24,12 +24,12 @@ const LatestMatch = props => {
             <p className="latest-match-team-name">{competingTeam}</p>
             <p className="latest-match-date">{date}</p>
             <p className="match-details">{venue}</p>
-            <p className="match-detail">{result}</p>
+            <p className="match-details">{result}</p>
           </div>
           <img
             src={competingTeamLogo}
-            alt={`latest match ${competingTeam}`}
             className="latest-match-team-logo"
+            alt={`latest match ${competingTeam}`}
           />
         </div>
         <hr className="separator" />

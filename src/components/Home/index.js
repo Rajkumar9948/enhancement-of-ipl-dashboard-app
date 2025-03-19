@@ -3,14 +3,15 @@ import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 
 import TeamCard from '../TeamCard'
+
 import './index.css'
 
 const teamsApiUrl = 'https://apis.ccbp.in/ipl'
 
 class Home extends Component {
   state = {
-    teamsData: [],
     isLoading: true,
+    teamsData: [],
   }
 
   componentDidMount() {
@@ -37,6 +38,7 @@ class Home extends Component {
 
     return (
       <ul className="teams-list">
+        {/* FIX6: The list of team cards should be rendered using Array.map() method */}
         {teamsData.map(team => (
           <TeamCard teamDetails={team} key={team.id} />
         ))}
@@ -46,7 +48,7 @@ class Home extends Component {
 
   renderLoader = () => (
     <div testid="loader" className="loader-container">
-      <Loader type="Oval" color="ffffff" height={50} />
+      <Loader type="Oval" color="#ffffff" height={50} />
     </div>
   )
 
